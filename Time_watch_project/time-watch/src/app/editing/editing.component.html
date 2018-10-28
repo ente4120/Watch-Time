@@ -1,0 +1,14 @@
+<h2>עריכת והוספה של עובדים חדשים</h2>
+<div>
+  <h3>הוספת עובד
+  </h3>
+  <button
+   routerLink="/form">לחץ
+  </button>
+  <h3>עריכת עובד קיים
+  </h3>
+  <input [(ngModel)]="employeeNumber"/>
+  <button routerLink="/edit-employee/{{employeeNumber}}">לחץ
+  </button>
+</div>
+

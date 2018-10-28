@@ -1,0 +1,11 @@
+<div *ngIf="selectedEmployee">
+  <h2>{{selectedEmployee.firstName}} {{selectedEmployee.lastName}}</h2>
+  <button (click)="activeWatch()">עדכון נוכחות</button>
+</div>
+{{resultWatch}}
+<h4>רשימת כניסות אחרונות</h4>
+<ul class="watches">
+    <li *ngFor="let watch of watches">
+      שעת כניסה {{watch.start|  date:'(dd/MM) hh:mm' }} - שעת יציאה {{watch.end | date:'(dd/MM) hh:mm'}}
+    </li>
+</ul>

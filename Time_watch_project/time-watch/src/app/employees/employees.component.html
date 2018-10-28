@@ -1,0 +1,13 @@
+<h2>רשימת עובדים</h2>
+
+<ul class="employees">
+  <li *ngFor="let employee of employees">
+    <a routerLink="/employee/{{employee.id}}">
+      <span class="badge"
+      [ngStyle]="{'background-color':employee.login === 'true' ? 'green' : 'red' }"
+      >{{employee.id}}</span> {{employee.firstName}} {{employee.lastName}}
+    </a>
+    <div class="badge2"(click)="sendMessage(employee.firstName)">X</div>
+
+  </li>
+</ul>

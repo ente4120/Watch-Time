@@ -1,0 +1,14 @@
+<div *ngIf="selectedEmployee">
+  <h2>{{selectedEmployee.firstName}} {{selectedEmployee.lastName}}</h2>
+  <div>
+    <h3>מזהה</h3>
+    <input [(ngModel)]="selectedEmployee.id" placeholder="name"/>
+    <h3>שם פרטי</h3>
+    <input [(ngModel)]="selectedEmployee.firstName" placeholder="name"/>
+    <h3>שם משפחה</h3>
+    <input [(ngModel)]="selectedEmployee.lastName" placeholder="name"/>
+    <h3>סטאטוס</h3>
+    <input [(ngModel)]="selectedEmployee.login" placeholder="name"/>
+  </div>
+  <button (click)="updateEmployee()">שמירה</button>
+</div>
